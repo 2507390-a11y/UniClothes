@@ -1,0 +1,16 @@
+{
+ "name": "ecommerce",
+ "version": "",
+ "description": "",
+ "main": "",
+ "repository": "",
+ "author": "",
+ "license": "",
+ "private": false,
+ "scripts": {
+  "sass:watch": "sass ./scss/style.scss ./css/style.css --watch --style=compressed --no-source-map"
+ },
+ "devDependencies": {
+  "sass": "^1.99.0"
+ }
+}
