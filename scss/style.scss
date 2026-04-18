@@ -3,14 +3,14 @@
 @use "./components.scss";
 @use "./header.scss";
 @use "./aside.scss"; 
+@use "./main.scss";
 @use "./footer.scss"; 
 
 body, button, svg, div {
 	transition: 
 		background-color 200ms ease,
 		color 200ms ease,
-		border 200ms ease 
-		; 
+		border 200ms ease; 
 }
 
 body {
