@@ -1,3 +1,4 @@
+// BUTTONS
 .icon-button {
 	display: flex; 
 	justify-content: center; 
@@ -34,9 +35,36 @@
 	}
 }
 
+// CARD
 .card {
 	background-color: var(--card);
 	border: 2px solid var(--border); 
 	padding: 1rem; 
 	border-radius: 4px; 
+}
+
+// ACCORDION 
+.accordion svg {
+	width: 1rem; 
+	height: 1rem; 
+}
+
+.open-accordion-icon {
+	display: block; 
+
+	&.hidden {
+		display: none; 
+	}
+}
+
+.close-accordion-icon {
+	display: block; 
+
+	&.hidden {
+		display: none; 
+	}
+}
+
+.accordion-content.hidden {
+	display: none; 
 }
