@@ -6,7 +6,7 @@
 @use "./main.scss";
 @use "./footer.scss"; 
 
-body, button, svg, div {
+body, button, svg, div, li {
 	transition: 
 		background-color 200ms ease,
 		color 200ms ease,
