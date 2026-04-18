@@ -84,7 +84,7 @@
 	justify-content: space-between;
 	font-size: 1rem;
 	font-weight: 500;
-	background-color: var(--background);
+	background-color: transparent;
 	color: var(--foreground);
 }
 
@@ -94,7 +94,7 @@
 	gap: .745rem;
 	padding-left: 2rem;
 	font-size: .875rem;
-}
+} 
 
 // RESPONSIVENESS
 @media(min-width: variables.$lg-screen) {
@@ -112,6 +112,11 @@
 	.sidebar__container {
 		width: 100%; 
 		padding-block: 0; 
+		background-color: transparent;
+	}
+
+	.sidebar__overlay {
+		background: transparent; 
 	}
 
 	.sidebar__close-button {
