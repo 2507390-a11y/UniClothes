@@ -1,0 +1,20 @@
+:root {
+	--background: #121212;
+	--foreground: #e0e0e0;
+	--button: #2a2a2a;
+	--button-hover: #3a3a3a;
+	--border: #2e2e2e;
+	--card: #1e1e1e;
+	--overlay: rgba(0, 0, 0, 0.6);
+
+	&.light {
+		--background: #f0f2ff;
+		--foreground: #1a1f3c;
+		--button: #313B72;
+		--button-hover: #4a57a8;
+		--border: #c5caf0;
+		--card: #ffffff;
+	}
+}
+
+$lg-screen: 64rem; 

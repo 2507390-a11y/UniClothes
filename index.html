@@ -15,7 +15,7 @@
 		<h1>UniClothes</h1>
 
 		<div class="header__actions-container">
-			<button class="icon-button" aria-label="Abrir Menu" data-js="sidebar-open">
+			<button class="icon-button header__sidebar-open" aria-label="Abrir Menu" data-js="sidebar-open">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
 					stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu">
 					<path d="M4 5h16" />
@@ -36,29 +36,31 @@
 		</div>
 	</header>
 
-	<aside id="sidebar" class="hidden" data-js="sidebar">	
-		<div class="sidebar__container">
-			<ul class="sidebar__categories-list">
-				<li>Camisetas</li>
-				<li>Blusas</li>
-				<li>Calças</li>
-				<li>Tênis</li>
-			</ul>
-
-			<button aria-label="Fechar Menu" data-js="sidebar-close" class="icon-button">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-					stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x">
-					<path d="M18 6 6 18" />
-					<path d="m6 6 12 12" />
-				</svg>
-			</button>
-		</div>
-
-		<div class="sidebar__overlay" aria-hidden="true" data-js="sidebar-close"></div>
-	</aside>
-
-	<main></main>
+	<div class="layout">
+		<aside id="sidebar" class="hidden" data-js="sidebar">	
+			<div class="sidebar__container">
+				<ul class="sidebar__categories-list">
+					<li>Camisetas</li>
+					<li>Blusas</li>
+					<li>Calças</li>
+					<li>Tênis</li>
+				</ul>
 	
+				<button aria-label="Fechar Menu" data-js="sidebar-close" class="icon-button">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+						stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x">
+						<path d="M18 6 6 18" />
+						<path d="m6 6 12 12" />
+					</svg>
+				</button>
+			</div>
+	
+			<div class="sidebar__overlay" aria-hidden="true" data-js="sidebar-close"></div>
+		</aside>
+
+		<main></main>
+	</div>
+
 	<footer></footer>
 </body>
 </html>

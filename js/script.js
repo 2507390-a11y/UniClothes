@@ -22,7 +22,6 @@ sidebarOpen.addEventListener("click", () => {
 
 	if (sidebar.classList.contains("hidden")) {
 		sidebar.classList.remove("hidden")
-		sidebar.classList.add("visible")
 	}
 })
 

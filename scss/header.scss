@@ -1,3 +1,5 @@
+@use "./variables.scss";
+
 #header {
 	display: flex;
 	justify-content: space-between;
@@ -14,4 +16,11 @@ h1 {
 .header__actions-container {
 	display: flex; 
 	gap: .5rem; 
+}
+
+// RESPONSIVENESS 
+@media(min-width: variables.$lg-screen) {
+	.header__sidebar-open {
+		display: none; 
+	}
 }

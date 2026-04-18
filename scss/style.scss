@@ -1,26 +1,8 @@
 @use "./resets.scss";
+@use "./variables.scss"; 
 @use "./components.scss";
 @use "./header.scss";
 @use "./aside.scss"; 
-
-:root {
-	--background: #121212;
-	--foreground: #e0e0e0;
-	--button: #2a2a2a;
-	--button-hover: #3a3a3a;
-	--border: #2e2e2e;
-	--card: #1e1e1e;
-	--overlay: rgba(0, 0, 0, 0.6);
-
-	&.light {
-		--background: #f0f2ff;
-		--foreground: #1a1f3c;
-		--button: #313B72;
-		--button-hover: #4a57a8;
-		--border: #c5caf0;
-		--card: #ffffff;
-	}
-}
 
 body, button, svg {
 	transition: 
@@ -29,7 +11,21 @@ body, button, svg {
 }
 
 body {
+	display: flex; 
+	flex-direction: column; 
+	min-height: 100vh; 
 	font-family: "Inter", sans-serif;
 	background-color: var(--background);
 	color: var(--foreground);
+}
+
+.layout {
+	flex-grow: 1; 
+}
+
+@media(min-width: variables.$lg-screen) {
+	.layout {
+		display: grid; 
+		grid-template-columns: 13.175rem 1fr; 
+	}
 }
