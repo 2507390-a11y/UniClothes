@@ -20,6 +20,12 @@
 	}
 }
 
+body, button, svg {
+	transition: 
+		background-color 200ms ease,
+		color 200ms ease; 
+}
+
 body {
 	font-family: "Inter", sans-serif;
 	background-color: var(--background);
