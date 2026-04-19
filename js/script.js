@@ -34,7 +34,7 @@ sidebarClose.forEach(close => {
 	})
 })
 
-// ACCORDION 
+// ACCORDION
 const accordions = document.querySelectorAll("[data-js='accordion']")
 
 accordions.forEach(accordion => {
@@ -56,5 +56,46 @@ accordions.forEach(accordion => {
 
 		 closeAccordionIcon.classList.add("hidden")
 		 openAccordionIcon.classList.remove("hidden")
+	})
+})
+
+
+// CART
+const cartBadge = document.querySelector("[data-js='cart-badge']")
+const addToCartButtons = document.querySelectorAll("[data-js='add-to-cart']")
+
+let cartCount = 0
+let toastTimeout
+
+function showCartToast(productName) {
+	const existing = document.querySelector(".cart-toast")
+	if (existing) existing.remove()
+	clearTimeout(toastTimeout)
+
+	const toast = document.createElement("div")
+	toast.className = "cart-toast"
+	toast.textContent = `"${productName}" adicionado ao carrinho`
+	document.body.appendChild(toast)
+
+	toastTimeout = setTimeout(() => {
+		toast.classList.add("hidden")
+		setTimeout(() => toast.remove(), 300)
+	}, 2500)
+}
+
+addToCartButtons.forEach(button => {
+	button.addEventListener("click", () => {
+		cartCount++
+
+		cartBadge.textContent = cartCount
+		cartBadge.classList.remove("hidden")
+		cartBadge.classList.remove("bump")
+		
+		requestAnimationFrame(() => {
+			cartBadge.classList.add("bump")
+		})
+
+		const productName = button.closest("[data-js='product-item']").querySelector("h3").textContent.trim()
+		showCartToast(productName)
 	})
 })
