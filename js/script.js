@@ -1,5 +1,6 @@
 import { toggleTheme } from "./theme.js"
 import { openSidebar, closeSidebar } from "./sidebar.js"
+import { accordionOpenClose } from "./accordion.js"
 
 const themeToggler = document.querySelector("[data-js='theme-toggler']")
 themeToggler.addEventListener("click", toggleTheme)
@@ -12,37 +13,17 @@ const sidebarCloseButtons = document.querySelectorAll("[data-js='sidebar-close']
 sidebarCloseButtons.forEach(close => close.addEventListener("click", closeSidebar))
 
 // ACCORDION
+
 const accordions = document.querySelectorAll("[data-js='accordion']")
 
 accordions.forEach(accordion => {
-	const accordionToggler = accordion.querySelector("[data-js='accordion-toggler']")
-	const accordionContent = accordion.querySelector("[data-js='accordion-content']")
+	const toggler = accordion.querySelector("[data-js='accordion-toggler']")
+	const content = accordion.querySelector("[data-js='accordion-content']")
 
-	const openAccordionIcon = accordion.querySelector("[data-js='open-accordion-icon']")
-	const closeAccordionIcon = accordion.querySelector("[data-js='close-accordion-icon']")
+	const openIcon = accordion.querySelector("[data-js='open-accordion-icon']")
+	const closeIcon = accordion.querySelector("[data-js='close-accordion-icon']")
 
-	accordionToggler.addEventListener("click", () => {
-		if(accordionContent.classList.contains("hidden")) {
-			openAccordionIcon.classList.add("hidden")
-			closeAccordionIcon.classList.remove("hidden")
-
-			accordionContent.classList.remove("hidden")			
-			accordionContent.style.height = "0px"
-
-			return requestAnimationFrame(() => {
-				accordionContent.style.height = accordionContent.scrollHeight + "px"
-			})
-		}
-
-		accordionContent.style.height = "0px"
-		
-		closeAccordionIcon.classList.add("hidden")
-		openAccordionIcon.classList.remove("hidden")
-
-		accordionContent.addEventListener("transitionend", () => {
-			if(accordionContent.style.height === "0px") accordionContent.classList.add("hidden")
-		}, { once: true })
-	})
+	toggler.addEventListener("click", () => accordionOpenClose(content, openIcon, closeIcon))
 })
 
 // CART
