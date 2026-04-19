@@ -1,28 +1,15 @@
 import { toggleTheme } from "./theme.js"
+import { openSidebar, closeSidebar } from "./sidebar.js"
 
 const themeToggler = document.querySelector("[data-js='theme-toggler']")
 themeToggler.addEventListener("click", toggleTheme)
 
 // SIDEBAR 
-const sidebar = document.querySelector("[data-js='sidebar']")
+const sidebarOpenButton = document.querySelector("[data-js='sidebar-open']")
+sidebarOpenButton.addEventListener("click", openSidebar)
 
-const sidebarOpen = document.querySelector("[data-js='sidebar-open']")
-
-sidebarOpen.addEventListener("click", () => {
-	if (sidebar.classList.contains("hidden")) {
-		sidebar.classList.remove("hidden")
-	}
-})
-
-const sidebarClose = document.querySelectorAll("[data-js='sidebar-close']")
-
-sidebarClose.forEach(close => {
-	close.addEventListener("click", () => {
-		sidebar.classList.remove("visible")
-		sidebar.classList.add("hidden")
-	})
-})
-
+const sidebarCloseButtons = document.querySelectorAll("[data-js='sidebar-close']")
+sidebarCloseButtons.forEach(close => close.addEventListener("click", closeSidebar))
 
 // ACCORDION
 const accordions = document.querySelectorAll("[data-js='accordion']")
@@ -30,8 +17,6 @@ const accordions = document.querySelectorAll("[data-js='accordion']")
 accordions.forEach(accordion => {
 	const accordionToggler = accordion.querySelector("[data-js='accordion-toggler']")
 	const accordionContent = accordion.querySelector("[data-js='accordion-content']")
-
-	accordionContent.style.height = "0px"
 
 	const openAccordionIcon = accordion.querySelector("[data-js='open-accordion-icon']")
 	const closeAccordionIcon = accordion.querySelector("[data-js='close-accordion-icon']")
@@ -41,8 +26,7 @@ accordions.forEach(accordion => {
 			openAccordionIcon.classList.add("hidden")
 			closeAccordionIcon.classList.remove("hidden")
 
-			accordionContent.classList.remove("hidden")
-
+			accordionContent.classList.remove("hidden")			
 			accordionContent.style.height = "0px"
 
 			return requestAnimationFrame(() => {
