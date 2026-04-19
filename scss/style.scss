@@ -33,3 +33,21 @@ body {
 		grid-template-columns: 13.175rem 1fr; 
 	}
 }
+
+:root {
+	@include variables.dark-theme;
+}
+
+@media(prefers-color-scheme: light) {
+	:root {
+		@include variables.light-theme;
+	}
+}
+
+:root[data-theme="dark"] {
+	@include variables.dark-theme;
+}
+
+:root[data-theme="light"] {
+	@include variables.light-theme;
+}

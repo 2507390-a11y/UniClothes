@@ -1,16 +1,16 @@
 // THEME 
+const root = document.documentElement
+
 const themeToggler = document.querySelector("[data-js='theme-toggler']")
 
 themeToggler.addEventListener("click", () => {
-	const root = document.documentElement
-	
-	if(root.classList.contains("dark")) {
-		root.classList.remove("dark")
-		return root.classList.add("light")
-	}
+	const currentTheme = root.getAttribute("data-theme") || 
+		(window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : light)
 
-	root.classList.remove("light")
-	root.classList.add("dark")
+	const nextTheme = currentTheme === "dark" ? "light" : "dark"
+
+	root.setAttribute("data-theme", nextTheme)
+	localStorage.setItem("theme", nextTheme)
 })
 
 // SIDEBAR 
