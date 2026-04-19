@@ -74,6 +74,8 @@ function showCartToast(productName) {
 
 	const toast = document.createElement("div")
 	toast.className = "cart-toast"
+	toast.setAttribute("role", "status")
+	toast.setAttribute("aria-live", "polite")
 	toast.textContent = `"${productName}" adicionado ao carrinho`
 	document.body.appendChild(toast)
 
