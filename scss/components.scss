@@ -122,7 +122,7 @@
 
 .accordion-content {
 	overflow: hidden;
-	transition: height 1s ease;
+	transition: height 300ms ease;
 
 	&.hidden {
 		height: 0;
