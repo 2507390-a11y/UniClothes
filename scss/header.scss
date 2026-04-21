@@ -23,6 +23,11 @@ h1 {
 	gap: .5rem; 
 }
 
+.logo {
+	fill: var(--foreground); 
+	width: 10rem; 
+}
+
 // RESPONSIVENESS 
 @media(min-width: variables.$lg-screen) {
 	.header__sidebar-open {
