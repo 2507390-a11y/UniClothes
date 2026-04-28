@@ -1,11 +1,11 @@
-# UniClothes — E-Commerce de Roupas
+# 👕 UniClothes — E-Commerce de Roupas
 
 Projeto integrador da disciplina **Design para Web** (Ensino Superior).  
 Simulação de uma loja virtual de roupas com foco em HTML semântico, CSS moderno, SASS, JavaScript e boas práticas de UX.
 
 ---
 
-## Tecnologias
+## 🛠️ Tecnologias
 
 - HTML5 (tags semânticas)
 - SASS/SCSS (compilado via `sass`)
@@ -15,7 +15,7 @@ Simulação de uma loja virtual de roupas com foco em HTML semântico, CSS moder
 
 ---
 
-## Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 ```
 /
@@ -41,7 +41,7 @@ Simulação de uma loja virtual de roupas com foco em HTML semântico, CSS moder
 
 ---
 
-## Funcionalidades
+## ✨ Funcionalidades
 
 | Funcionalidade | Status |
 |---|---|
@@ -60,7 +60,7 @@ Simulação de uma loja virtual de roupas com foco em HTML semântico, CSS moder
 
 ---
 
-## JavaScript — Módulos do `script.js`
+## ⚙️ JavaScript — Módulos do `script.js`
 
 | Módulo | O que faz |
 |---|---|
@@ -71,7 +71,7 @@ Simulação de uma loja virtual de roupas com foco em HTML semântico, CSS moder
 
 ---
 
-## Organização SCSS
+## 🎨 Organização SCSS
 
 O SASS segue uma estrutura modular com arquivos parciais:
 
@@ -83,14 +83,14 @@ O SASS segue uma estrutura modular com arquivos parciais:
 
 ---
 
-## Como Rodar
+## 🚀 Como Rodar
 
-### Pré-requisitos
+### 📋 Pré-requisitos
 
 - [Node.js](https://nodejs.org) instalado
 - Yarn ou npm
 
-### Instalação
+### 📦 Instalação
 
 ```bash
 yarn install
@@ -98,7 +98,7 @@ yarn install
 npm install
 ```
 
-### Compilar SASS (modo watch)
+### 👀 Compilar SASS (modo watch)
 
 ```bash
 yarn sass:watch
@@ -110,7 +110,7 @@ Abra o `index.html` no navegador (ou use uma extensão como **Live Server** no V
 
 ---
 
-## Autor
+## 👤 Autor
 
 **Gabriel Ribeiro** — RA: 2507390  
 Disciplina: Design para Web
